@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Study Dashboard</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
   <div class="clock-container">
@@ -16,6 +16,12 @@
     <textarea id="daily-notes" placeholder="Write tasks here..."></textarea>
     <button id="save-notes">Save Notes</button>
   </div>
+  <div class="tasks">
+  <h2>Today's Tasks</h2>
+  <input id="task-input" placeholder="New task">
+  <button id="add-task">Add</button>
+  <ul id="task-list"></ul>
+</div>
 
   <script src="script.js"></script>
 </body>

@@ -16,3 +16,19 @@ document.getElementById('save-notes').addEventListener('click', () => {
   localStorage.setItem('dailyNotes', notesArea.value);
   alert('Notes saved!');
 });
+
+// Tasks
+const taskInput = document.getElementById('task-input');
+const taskList = document.getElementById('task-list');
+
+document.getElementById('add-task').onclick = () => {
+  if (taskInput.value === "") return;
+
+  const li = document.createElement('li');
+  li.textContent = taskInput.value;
+
+  li.onclick = () => li.classList.toggle('done');
+
+  taskList.appendChild(li);
+  taskInput.value = "";
+};

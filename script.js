@@ -32,3 +32,13 @@ document.getElementById('add-task').onclick = () => {
   taskList.appendChild(li);
   taskInput.value = "";
 };
+const toggle = document.getElementById('theme-toggle');
+toggle.onclick = () => {
+  document.body.classList.toggle('dark');
+  localStorage.setItem('theme',
+    document.body.classList.contains('dark') ? 'dark' : 'light');
+};
+
+if (localStorage.getItem('theme') === 'dark') {
+  document.body.classList.add('dark');
+}
